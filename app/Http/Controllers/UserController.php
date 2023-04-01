@@ -30,7 +30,7 @@ Class UserController extends Controller {
         $this->validate($request,$rules);
 
         $user = User::create($request->all());
-        return $this->json($user, 200);
+        return response()->json($user, 200);
     }
 }
     
